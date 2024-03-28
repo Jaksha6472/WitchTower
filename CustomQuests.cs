@@ -194,7 +194,7 @@ namespace AlvadeasWitchTower
                     textList.AddRange(text.Split("|"));
 
                     Game1.multipleDialogues(textList.ToArray());
-                    Game1.player.addQuest(15926001);
+                    Game1.player.addQuest("15926001");
                     if (!NetWorldState.checkAnywhereForWorldStateID("walpurgis.gotFirstRavenRequest"))
                     {
                         NetWorldState.addWorldStateIDEverywhere("walpurgis.gotFirstRavenRequest");
@@ -207,7 +207,7 @@ namespace AlvadeasWitchTower
                     textList.AddRange(text.Split("|"));
 
                     Game1.multipleDialogues(textList.ToArray());
-                    Game1.player.addQuest(15926001);
+                    Game1.player.addQuest("15926001");
                     if (!NetWorldState.checkAnywhereForWorldStateID("walpurgis.gotFirstRavenRequest"))
                     {
                         NetWorldState.addWorldStateIDEverywhere("walpurgis.gotFirstRavenRequest");
@@ -220,7 +220,7 @@ namespace AlvadeasWitchTower
                     textList.AddRange(text.Split("|"));
 
                     Game1.multipleDialogues(textList.ToArray());
-                    Game1.player.addQuest(15926002);
+                    Game1.player.addQuest("15926002");
                     if (!NetWorldState.checkAnywhereForWorldStateID("walpurgis.gotSecondRavenRequest"))
                     {
                         NetWorldState.addWorldStateIDEverywhere("walpurgis.gotSecondRavenRequest");
@@ -233,7 +233,7 @@ namespace AlvadeasWitchTower
                     textList.AddRange(text.Split("|"));
 
                     Game1.multipleDialogues(textList.ToArray());
-                    Game1.player.addQuest(15926002);
+                    Game1.player.addQuest("15926002");
                     if (!NetWorldState.checkAnywhereForWorldStateID("walpurgis.gotSecondRavenRequest"))
                     {
                         NetWorldState.addWorldStateIDEverywhere("walpurgis.gotSecondRavenRequest");
@@ -246,7 +246,7 @@ namespace AlvadeasWitchTower
                     textList.AddRange(text.Split("|"));
 
                     Game1.multipleDialogues(textList.ToArray());
-                    Game1.player.addQuest(15926003);
+                    Game1.player.addQuest("15926003");
                     if (!NetWorldState.checkAnywhereForWorldStateID("walpurgis.gotThirdRavenRequest"))
                     {
                         NetWorldState.addWorldStateIDEverywhere("walpurgis.gotThirdRavenRequest");
@@ -259,7 +259,7 @@ namespace AlvadeasWitchTower
                     textList.AddRange(text.Split("|"));
 
                     Game1.multipleDialogues(textList.ToArray());
-                    Game1.player.addQuest(15926003);
+                    Game1.player.addQuest("15926003");
                     if (!NetWorldState.checkAnywhereForWorldStateID("walpurgis.gotThirdRavenRequest"))
                     {
                         NetWorldState.addWorldStateIDEverywhere("walpurgis.gotThirdRavenRequest");
@@ -318,7 +318,7 @@ namespace AlvadeasWitchTower
                     textList.AddRange(text.Split("|"));
 
                     Game1.multipleDialogues(textList.ToArray());
-                    Game1.player.addQuest(15926004);
+                    Game1.player.addQuest("15926004");
                     if (!NetWorldState.checkAnywhereForWorldStateID("walpurgis.raven_acceptFourthRavenRequest"))
                     {
                         NetWorldState.addWorldStateIDEverywhere("walpurgis.gotFourthRavenRequest");
@@ -377,7 +377,7 @@ namespace AlvadeasWitchTower
                             if (hasEnoughRings)
                             {
                                 removeResources(InventoryItems, 516, 1);
-                                Game1.player.completeQuest(15926004);
+                                Game1.player.completeQuest("15926004");
 
                                 textList = new List<string>();
                                 text = Helper.Translation.Get("witchtower.raven_finishQuestLine");
@@ -410,7 +410,7 @@ namespace AlvadeasWitchTower
                             if (hasEnoughCarp)
                             {
                                 removeResources(InventoryItems, 269, 3);
-                                Game1.player.completeQuest(15926003);
+                                Game1.player.completeQuest("15926003");
 
                                 answers = new List<Response>
                                 {
@@ -439,7 +439,7 @@ namespace AlvadeasWitchTower
                             if (hasEnoughFairyRoses)
                             {
                                 removeResources(InventoryItems, 595, 5);
-                                Game1.player.completeQuest(15926002);
+                                Game1.player.completeQuest("15926002");
 
                                 text = Helper.Translation.Get("witchtower.raven_thirdRavenRequest");
                                 text = text.Replace("@", playerName);
@@ -479,7 +479,7 @@ namespace AlvadeasWitchTower
                             if (hasEnoughLifeExlirs)
                             {
                                 removeResources(InventoryItems, 773, 2);
-                                Game1.player.completeQuest(15926001);
+                                Game1.player.completeQuest("15926001");
 
                                 text = Helper.Translation.Get("witchtower.raven_secondRavenRequest");
                                 text = text.Replace("@", playerName);
@@ -523,7 +523,7 @@ namespace AlvadeasWitchTower
                             return true;
                         }
 
-                        if (Game1.player.eventsSeen.Contains(112))
+                        if (Game1.player.eventsSeen.Contains("112"))
                         {
                             text = Helper.Translation.Get("witchtower.raven_introduction");
                             text = text.Replace("@", playerName);
@@ -588,7 +588,7 @@ namespace AlvadeasWitchTower
 
                                 Game1.afterDialogues = () =>
                                 {
-                                    Item hat = new Hat(70);
+                                    Item hat = new Hat("70");
                                     Game1.player.holdUpItemThenMessage(hat, false);
                                     Game1.player.addItemToInventory(hat);
 
